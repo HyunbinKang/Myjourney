@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">gojourney</string>
     <string name="title_activity_maps">Map</string>
+
+    <string-array name="Country">
+        <item>korea</item>
+        <item>japan</item>
+        <item>china</item>
+        <item>spain</item>
+        <item>canada</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+        <item>This is random description</item>
+    </string-array>
 </resources>

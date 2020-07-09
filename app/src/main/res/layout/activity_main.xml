@@ -12,7 +12,7 @@
         android:layout_height="139dp"
         android:gravity="center"
         android:text="MY JOURNEY"
-        android:textSize="40dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:autoSizeMaxTextSize="@android:dimen/thumbnail_height"
         app:fontFamily="sans-serif" />
@@ -20,7 +20,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="197dp"
         app:srcCompat="@drawable/tourism" />
 
     <Button

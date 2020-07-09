@@ -17,6 +17,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MurciaActivity"/>
+        <activity android:name=".PicActivity"/>
+        <activity android:name=".MyAdapter"/>
+        <activity android:name="SecondActivity"
+            android:parentActivityName=".PicActivity"
+            android:label="Details"/>
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
