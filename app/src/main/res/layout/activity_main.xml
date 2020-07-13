@@ -13,7 +13,7 @@
         android:layout_height="84dp"
         android:gravity="center"
         android:text="MY JOURNEY"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:autoSizeMaxTextSize="@android:dimen/thumbnail_height"
         app:fontFamily="sans-serif" />
@@ -28,27 +28,27 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="33dp"
-        android:text="TextView" />
+        android:text="Gooooooooo" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:background="@drawable/button1"
         android:text="google map" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:background="@drawable/button1"
-        android:text="pictures" />
+        android:text="countries" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:background="@drawable/button2"
-        android:text="wannago" />
+        android:text="something.." />
 
 </LinearLayout>

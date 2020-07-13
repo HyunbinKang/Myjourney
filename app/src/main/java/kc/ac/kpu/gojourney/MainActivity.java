@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     private Button buttonformap;
     private Button buttonforpic;
+    private Button buttonfor3;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonformap = (Button) findViewById(R.id.button2);
         buttonforpic = (Button) findViewById(R.id.button3);
+        buttonfor3 = (Button) findViewById(R.id.button4);
 
         buttonformap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PicActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonfor3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
                 startActivity(intent);
             }
         });

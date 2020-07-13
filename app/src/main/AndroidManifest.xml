@@ -16,8 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MurciaActivity"/>
         <activity android:name=".PicActivity"/>
+        <activity android:name=".ThirdActivity"/>
         <activity android:name=".MyAdapter"/>
         <activity android:name="SecondActivity"
             android:parentActivityName=".PicActivity"

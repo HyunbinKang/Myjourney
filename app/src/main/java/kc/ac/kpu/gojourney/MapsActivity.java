@@ -22,6 +22,7 @@ import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -37,13 +38,24 @@ public class MapsActivity extends FragmentActivity implements
         GoogleMap.OnMarkerClickListener,
         OnMapReadyCallback {
 
-    private static final LatLng PERTH = new LatLng(-31.952854, 115.857342);
-    private static final LatLng SYDNEY = new LatLng(-33.87365, 151.20689);
-    private static final LatLng BRISBANE = new LatLng(-27.47093, 153.0235);
+    private static final LatLng VIETNAM = new LatLng(16.0473223,108.1364922);
+    private static final LatLng PHILIPPINES = new LatLng(11.576464,113.5272617);
+    private static final LatLng TAIWAN = new LatLng(23.4309016,115.5711233);
+    private static final LatLng THAILAND = new LatLng(13.2169073, 91.9971356);
+    private static final LatLng CHINA = new LatLng(31.2243023,120.9148227);
+    private static final LatLng JAPAN = new LatLng(34.7628282,135.2077892);
+    private static final LatLng CANADA = new LatLng(48.7466171,-129.6697819);
 
-    private Marker mPerth;
-    private Marker mSydney;
-    private Marker mBrisbane;
+
+
+
+    private Marker mVietnam;
+    private Marker mPhilippines;
+    private Marker mTaiwan;
+    private Marker mThailand;
+    private Marker mChina;
+    private Marker mJapan;
+    private Marker mCanada;
 
     private GoogleMap mMap;
 
@@ -63,23 +75,50 @@ public class MapsActivity extends FragmentActivity implements
      */
     @Override
     public void onMapReady(GoogleMap map) {
+
         mMap = map;
 
         // Add some markers to the map, and add a data object to each marker.
-        mPerth = mMap.addMarker(new MarkerOptions()
-                .position(PERTH)
-                .title("Perth"));
-        mPerth.setTag(0);
+        mVietnam = mMap.addMarker(new MarkerOptions()
+                .position(VIETNAM)
+                .title("VIETNAM"));
+        mVietnam.setTag(0);
 
-        mSydney = mMap.addMarker(new MarkerOptions()
-                .position(SYDNEY)
-                .title("Sydney"));
-        mSydney.setTag(0);
+        mPhilippines = mMap.addMarker(new MarkerOptions()
+                .position(PHILIPPINES)
+                .title("PHILIPPINES"));
+        mPhilippines.setTag(0);
 
-        mBrisbane = mMap.addMarker(new MarkerOptions()
-                .position(BRISBANE)
-                .title("Brisbane"));
-        mBrisbane.setTag(0);
+        mTaiwan = mMap.addMarker(new MarkerOptions()
+                .position(TAIWAN)
+                .title("TAIWAN"));
+        mTaiwan.setTag(0);
+
+        mThailand = mMap.addMarker(new MarkerOptions()
+                .position(THAILAND)
+                .title("THAILAND")
+                .snippet("dddd"));
+        mThailand.setTag(0);
+
+        mChina = mMap.addMarker(new MarkerOptions()
+                .position(CHINA)
+                .title("CHINA")
+                .snippet("dddd"));
+        mChina.setTag(0);
+
+        mJapan = mMap.addMarker(new MarkerOptions()
+                .position(JAPAN)
+                .title("JAPAN")
+                .snippet("dddd"));
+        mJapan.setTag(0);
+
+        mCanada = mMap.addMarker(new MarkerOptions()
+                .position(CANADA)
+                .title("CANADA")
+                .snippet("dddd"));
+        mCanada.setTag(0);
+
+
 
         // Set a listener for marker click.
         mMap.setOnMarkerClickListener(this);
@@ -98,10 +137,10 @@ public class MapsActivity extends FragmentActivity implements
         if (clickCount != null) {
             clickCount = clickCount + 1;
             marker.setTag(clickCount);
-            //Toast.makeText(this,
-            //        marker.getTitle() +
-            //                " has been clicked " + clickCount + " times.",
-            //        Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,
+                    marker.getTitle() +
+                            " ♥ " + clickCount + " times.",
+                    Toast.LENGTH_SHORT).show();
         }
 
         // Return false to indicate that we have not consumed the event and that we wish
